@@ -63,7 +63,7 @@ public class NewFileAction extends AnAction {
                 } catch (Exception ex) {
                     ex.printStackTrace();
                 }
-                //优化生成的所有Java类
+                //Optimize all generated Java classes
                 CrudUtils.doOptimize(project);
             }
         }.execute());

@@ -40,7 +40,7 @@ public class CrudAddConnDialog extends DialogWrapper {
 	public CrudAddConnDialog(CrudConnView crudConnView) {
 		super(crudConnView.getComponent(), false);
 		myCrudConnView = crudConnView;
-		setTitle("添加连接");
+		setTitle("Add Connection");
 		myTestButton.addActionListener(e -> {
 			isRepaint = false;
 			Container contentPane = getContentPane();
@@ -52,7 +52,7 @@ public class CrudAddConnDialog extends DialogWrapper {
 				DbHelper dbHelper = new DbHelper(connTemp.getHost(), connTemp.getPort(), connTemp.getUsername(), connTemp.getPassword());
 				dbHelper.getDatabases();
 
-				Messages.showInfoMessage(myMainPanel, "连接成功", "");
+				Messages.showInfoMessage(myMainPanel, "connection succeeded", "");
 			} catch (Exception ex) {
 				Messages.showErrorDialog(myMainPanel, ex.getMessage());
 			} finally {

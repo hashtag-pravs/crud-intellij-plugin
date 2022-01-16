@@ -12,17 +12,17 @@ import java.util.List;
 public interface ProjectTemplateService {
 
     /**
-     * 查询所有项目模板名称
+     * Query all project template names
      *
-     * @return 项目模板名称列表
+     * @return List of project template names
      */
     List<String> findAllName();
 
     /**
-     * 通过名称获取项目模板
+     * Get project template by name
      *
-     * @param name 项目模板名称
-     * @return 项目模板
+     * @param name project template name
+     * @return project template
      */
     ProjectTemplate getByName(String name);
 

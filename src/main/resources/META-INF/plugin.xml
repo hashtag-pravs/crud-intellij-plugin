@@ -46,9 +46,9 @@
         </group>
         <!-- Add your actions here -->
         <action class="com.github.mars05.crud.intellij.plugin.action.NewFileAction"
-                id="crud.NewFileAction" description="创建Crud"
+                id="crud.NewFileAction" description="Create Crud"
                 icon="/icons/mysql.png"
-                text="从MySQL生成">
+                text="From MySQL generation">
             <add-to-group group-id="CrudActionGroup"/>
         </action>
     </actions>

@@ -93,7 +93,7 @@
             </constraints>
             <properties>
               <font size="16"/>
-              <text value="框架选择: "/>
+              <text value="Framework : "/>
             </properties>
           </component>
           <component id="63bb5" class="javax.swing.JComboBox" binding="myFrameComboBox">

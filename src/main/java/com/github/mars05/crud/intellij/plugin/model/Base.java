@@ -14,8 +14,8 @@ public abstract class Base {
     private String name;
 
     /**
-     * @param comment 类的注释
-     * @param name    类的全限定名
+     * @param comment class annotation
+     * @param name    fully qualified name of the class
      */
     public Base(String comment, String name) {
         this.comment = comment;

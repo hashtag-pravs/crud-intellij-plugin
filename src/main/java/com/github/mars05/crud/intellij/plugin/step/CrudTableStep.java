@@ -64,19 +64,19 @@ public class CrudTableStep extends ModuleWizardStep {
         try {
             List<ListElement> elements = myCrudTableView.getCrudList().getSelectedValuesList();
             if (elements == null || elements.size() == 0) {
-                throw new Exception("请选择至少一个表");
+                throw new Exception("Please select at least one table");
             }
             List<Table> tables = new Vector<>();
             CountDownLatch latch = new CountDownLatch(elements.size());
             for (ListElement element : elements) {
-                // 线程处理
+                // threading
                 new Thread(() -> {
                     tables.add(dbHelper.getTable(element.getName()));
                     latch.countDown();
                 }).start();
             }
             if (!latch.await(10L, TimeUnit.SECONDS)) {
-                throw new Exception("获取" + elements.size() + "个表失败");
+                throw new Exception("Obtain" + elements.size() + "table failed");
             }
 
             for (Table table : tables) {
@@ -89,12 +89,12 @@ public class CrudTableStep extends ModuleWizardStep {
                     }
                 }
                 if (!hasId) {
-                    throw new Exception("表: " + table.getName() + " 没有主键");
+                    throw new Exception("table: " + table.getName() + " no primary key");
                 }
             }
             SelectionContext.setTables(tables);
         } catch (Exception e) {
-            throw new ConfigurationException(e.getMessage(), "表选择失败");
+            throw new ConfigurationException(e.getMessage(), "table selection failed");
         }
         return super.validate();
     }

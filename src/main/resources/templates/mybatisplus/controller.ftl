@@ -32,32 +32,32 @@ public class ${simpleName} {
     private ${service.simpleName} ${service.varName};
 
     @GetMapping("/{id}")
-    @ApiOperation("通过ID查询单个${model.comment}")
+    @ApiOperation("Find by Id ${model.comment}")
     public ${model.simpleName} findById(@ApiParam("ID") @PathVariable("id") ${field.typeSimpleName} id) {
         return ${service.varName}.findById(id);
     }
 
     @GetMapping
-    @ApiOperation("分页查询${model.comment}")
-    public IPage<${model.simpleName}> findByPage(@ApiParam("页号") @RequestParam(defaultValue = "1") Integer pageNum,
-                                                @ApiParam("每页大小") @RequestParam(defaultValue = "10") Integer pageSize) {
+    @ApiOperation("Paging query${model.comment}")
+    public IPage<${model.simpleName}> findByPage(@ApiParam("Page number") @RequestParam(defaultValue = "1") Integer pageNum,
+                                                @ApiParam("Size per page") @RequestParam(defaultValue = "10") Integer pageSize) {
         return ${service.varName}.findByPage(pageNum, pageSize);
     }
 
     @PostMapping
-    @ApiOperation("新增${model.comment}")
+    @ApiOperation("Create ${model.comment}")
     public void insert(@RequestBody ${model.simpleName} ${model.varName}) {
         ${service.varName}.insert(${model.varName});
     }
 
     @PutMapping
-    @ApiOperation("修改${model.comment}")
+    @ApiOperation("Update ${model.comment}")
     public void update(@RequestBody ${model.simpleName} ${model.varName}) {
         ${service.varName}.update(${model.varName});
     }
 
     @DeleteMapping("/{id}")
-    @ApiOperation("通过ID删除单个${model.comment}")
+    @ApiOperation("Delete by ID${model.comment}")
     public void deleteById(@ApiParam("ID") @PathVariable("id") ${field.typeSimpleName} id) {
         ${service.varName}.deleteById(id);
     }

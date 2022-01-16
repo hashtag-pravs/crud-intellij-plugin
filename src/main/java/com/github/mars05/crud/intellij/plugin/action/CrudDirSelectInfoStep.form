@@ -22,7 +22,7 @@
             </constraints>
             <properties>
               <font size="16"/>
-              <text value="框架选择: "/>
+              <text value="frame selection: "/>
             </properties>
           </component>
           <component id="efd10" class="javax.swing.JComboBox" binding="myFrameComboBox">
@@ -81,7 +81,7 @@
                 </constraints>
                 <properties>
                   <font size="16"/>
-                  <text value="Package 设置: "/>
+                  <text value="Package setup: "/>
                 </properties>
               </component>
               <component id="db9bb" class="javax.swing.JCheckBox" binding="myServiceCheckBox">
@@ -173,7 +173,7 @@
                   <grid row="4" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
                 </constraints>
                 <properties>
-                  <text value="mapper文件: "/>
+                  <text value="mapper file: "/>
                 </properties>
               </component>
             </children>

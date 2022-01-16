@@ -13,9 +13,9 @@ public class Field {
     private boolean id;
 
     /**
-     * @param comment    字段注释
-     * @param type       字段类型
-     * @param columnName 列的名称
+     * @param comment    field annotation
+     * @param type       Field Type
+     * @param columnName column name
      */
     public Field(String comment, Class<?> type, String columnName) {
 //        if (StringUtils.startsWith(columnName, "is_")) {

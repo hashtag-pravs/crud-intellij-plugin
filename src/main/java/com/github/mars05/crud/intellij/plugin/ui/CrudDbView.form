@@ -14,7 +14,7 @@
         </constraints>
         <properties>
           <font size="16"/>
-          <text value="选择数据库"/>
+          <text value="select database"/>
         </properties>
       </component>
       <component id="b04f8" class="javax.swing.JLabel" binding="myPathLabel">

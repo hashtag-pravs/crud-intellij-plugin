@@ -49,7 +49,7 @@ public class CrudConnStep extends ModuleWizardStep {
         try {
             int index = myCrudConnView.getCrudList().getSelectedIndex();
             if (index == -1) {
-                throw new Exception("请选择一个连接");
+                throw new Exception("Please select a connection");
             }
             Conn conn = CrudSettings.getInstance().getConns().get(index);
 
@@ -65,7 +65,7 @@ public class CrudConnStep extends ModuleWizardStep {
             SelectionContext.setProjectType(ProjectType.SPRING_BOOT);
             SelectionContext.setConn(conn);
         } catch (Exception e) {
-            throw new ConfigurationException(e.getMessage(), "连接打开失败");
+            throw new ConfigurationException(e.getMessage(), "connection open failed");
         }
         return super.validate();
     }

@@ -5,7 +5,7 @@ import lombok.Data;
 import java.util.List;
 
 /**
- * 项目模板
+ * project template
  *
  * @author xiaoyu
  */
@@ -13,12 +13,12 @@ import java.util.List;
 public class ProjectTemplate {
 
     /**
-     * 名称
+     * name
      */
     private String name;
 
     /**
-     * 文件模板列表
+     * fileTemplateList
      */
     private List<FileTemplate> fileTemplateList;
 

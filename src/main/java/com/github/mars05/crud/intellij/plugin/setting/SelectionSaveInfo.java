@@ -1,7 +1,7 @@
 package com.github.mars05.crud.intellij.plugin.setting;
 
 /**
- * 包路径选择记录
+ * package path selection record
  *
  * @author xiaoyu
  */

@@ -3,7 +3,7 @@ package com.github.mars05.crud.intellij.plugin.model.template;
 import lombok.Data;
 
 /**
- * 文件
+ * document
  *
  * @author xiaoyu
  */

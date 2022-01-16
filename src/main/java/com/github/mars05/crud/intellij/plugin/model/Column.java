@@ -10,9 +10,9 @@ public class Column {
     private boolean id;
 
     /**
-     * @param comment 列注释
-     * @param name    列名
-     * @param type    列类型
+     * @param comment column comment
+     * @param name    column name
+     * @param type    type
      */
     public Column(String comment, String name, int type) {
         this.comment = comment;

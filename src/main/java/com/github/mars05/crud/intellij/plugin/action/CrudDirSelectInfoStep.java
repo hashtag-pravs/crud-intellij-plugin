@@ -135,54 +135,54 @@ public class CrudDirSelectInfoStep extends ModuleWizardStep {
     @Override
     public boolean validate() throws ConfigurationException {
         if (!myModelCheckBox.isSelected() && !myDaoCheckBox.isSelected() && !myServiceCheckBox.isSelected() && !myControllerCheckBox.isSelected()) {
-            throw new ConfigurationException("未选择需要生成的文件");
+            throw new ConfigurationException("No file to generate selected");
         }
         JavaPsiFacade facade = JavaPsiFacade.getInstance(myProject);
         if (OrmType.MYBATIS == myFrameComboBox.getSelectedIndex()) {
             try {
                 Preconditions.checkNotNull(facade.findClass("org.apache.ibatis.session.SqlSession", GlobalSearchScope.moduleWithDependenciesAndLibrariesScope(myModule)),
-                        "org.apache.ibatis.session.SqlSession 未找到");
+                        "org.apache.ibatis.session.SqlSession not found");
                 Preconditions.checkNotNull(facade.findClass("org.mybatis.spring.SqlSessionFactoryBean", GlobalSearchScope.moduleWithDependenciesAndLibrariesScope(myModule)),
-                        "org.mybatis.spring.SqlSessionFactoryBean 未找到");
+                        "org.mybatis.spring.SqlSessionFactoryBean not found");
                 if (myDaoCheckBox.isSelected()) {
                     Preconditions.checkNotNull(facade.findClass("com.github.pagehelper.Page", GlobalSearchScope.moduleWithDependenciesAndLibrariesScope(myModule)),
-                            "com.github.pagehelper.Page 未找到");
+                            "com.github.pagehelper.Page not found");
                 }
             } catch (Exception e) {
-                throw new ConfigurationException(e.getMessage(), "缺少依赖");
+                throw new ConfigurationException(e.getMessage(), "lack of dependencies");
             }
             SelectionContext.setOrmType(OrmType.MYBATIS);
         } else if (OrmType.JPA == myFrameComboBox.getSelectedIndex()) {
             try {
                 Preconditions.checkNotNull(facade.findClass("javax.persistence.Table", GlobalSearchScope.moduleWithDependenciesAndLibrariesScope(myModule)),
-                        "javax.persistence.Table 未找到");
+                        "javax.persistence.Table not found");
                 Preconditions.checkNotNull(facade.findClass("org.springframework.data.jpa.repository.JpaRepository", GlobalSearchScope.moduleWithDependenciesAndLibrariesScope(myModule)),
-                        "org.springframework.data.jpa.repository.JpaRepository 未找到");
+                        "org.springframework.data.jpa.repository.JpaRepository not found");
                 Preconditions.checkNotNull(facade.findClass("org.springframework.data.domain.Page", GlobalSearchScope.moduleWithDependenciesAndLibrariesScope(myModule)),
-                        "org.springframework.data.domain.Page 未找到");
+                        "org.springframework.data.domain.Page not found");
             } catch (Exception e) {
-                throw new ConfigurationException(e.getMessage(), "缺少依赖");
+                throw new ConfigurationException(e.getMessage(), "lack of dependencies");
             }
             SelectionContext.setOrmType(OrmType.JPA);
         } else {
             try {
                 Preconditions.checkNotNull(facade.findClass("com.baomidou.mybatisplus.annotation.TableName", GlobalSearchScope.moduleWithDependenciesAndLibrariesScope(myModule)),
-                        "com.baomidou.mybatisplus.annotation.TableName 未找到");
+                        "com.baomidou.mybatisplus.annotation.TableName not found");
                 Preconditions.checkNotNull(facade.findClass("org.apache.ibatis.session.SqlSession", GlobalSearchScope.moduleWithDependenciesAndLibrariesScope(myModule)),
-                        "org.apache.ibatis.session.SqlSession 未找到");
+                        "org.apache.ibatis.session.SqlSession not found");
                 Preconditions.checkNotNull(facade.findClass("org.mybatis.spring.SqlSessionFactoryBean", GlobalSearchScope.moduleWithDependenciesAndLibrariesScope(myModule)),
-                        "org.mybatis.spring.SqlSessionFactoryBean 未找到");
+                        "org.mybatis.spring.SqlSessionFactoryBean not found");
                 if (myDaoCheckBox.isSelected()) {
                     Preconditions.checkNotNull(facade.findClass("com.baomidou.mybatisplus.extension.plugins.PaginationInterceptor", GlobalSearchScope.moduleWithDependenciesAndLibrariesScope(myModule)),
-                            "com.baomidou.mybatisplus.extension.plugins.PaginationInterceptor 未找到");
+                            "com.baomidou.mybatisplus.extension.plugins.PaginationInterceptor not found");
                 }
             } catch (Exception e) {
-                throw new ConfigurationException(e.getMessage(), "缺少依赖");
+                throw new ConfigurationException(e.getMessage(), "lack of dependencies");
             }
             SelectionContext.setOrmType(OrmType.MYBATIS_PLUS);
         }
 
-        //先清空所有包
+        //Clear all packages first
         SelectionContext.clearSelection();
 
         SelectionContext.setControllerPackage(myControllerField.getText());
@@ -213,7 +213,7 @@ public class CrudDirSelectInfoStep extends ModuleWizardStep {
 
     private void checkBoxSetup(boolean selected) {
         if (selected) {
-            //处理选中
+            //handle selection
             if (myControllerCheckBox.isSelected()) {
                 myModelCheckBox.setSelected(true);
                 myDaoCheckBox.setSelected(true);
@@ -226,7 +226,7 @@ public class CrudDirSelectInfoStep extends ModuleWizardStep {
             }
         } else {
             if (!myModelCheckBox.isSelected()) {
-                //处理没选中
+                //Processing is not selected
                 myDaoCheckBox.setSelected(false);
                 myServiceCheckBox.setSelected(false);
                 myControllerCheckBox.setSelected(false);

@@ -15,7 +15,7 @@
         <properties>
           <enabled value="true"/>
           <font size="16"/>
-          <text value="选择表"/>
+          <text value="selection table"/>
         </properties>
       </component>
       <component id="59daa" class="javax.swing.JLabel" binding="myPathLabel">

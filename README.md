@@ -1,43 +1,43 @@
-Crud Intellij Plugin
+CRUD Intellij Plugin
 ===============
-一个增删改查的插件，可以根据数据库表结构，帮助您快速生成相关代码。
+A plug-in that adds a modified reservation, can help you quickly generate related code according to the database table structure.
 
-使用的方式有两种: 
-- 从Crud Plugin 生成项目
-- 已有项目右键选择生成代码
+There are two ways to use:
+- Generate projects from crud plugin
+- Extemplation Right click to generate code
 
-### 注意: 
-1. 目前暂不支持字段类型的映射关系设置
-2. 目前暂不支持表之间的对应关系处理
-3. 为表和字段设置合适的注释。
-4. 建议根据《阿里巴巴Java开发手册》的MySQL数据库规约来设计数据库表
+### Notice: 
+1. Currently, the mapping relationship settings for field types are not supported.
+2. Currently do not support the corresponding relationship processing between tables
+3. Set the appropriate annotation for the tables and fields.
+4. It is recommended to design a database table according to the "Alibaba Java Development Manual".
 
-### 支持的环境
-环境 | 版本
----|---
-Java | 1.8以上
-Intellij Idea | 2017.3以上
+### Support environment
+Environment | version
+--- | ---
+Java | 1.8 or more
+Intellij Idea | 2017.3 or more
 
-## 插件安装
-#### 旧版本idea：
-  - <kbd>File</kbd> > <kbd>Settings</kbd> > <kbd>Plugins</kbd> > <kbd>Browse repositories...</kbd> > <kbd>Search for "crud"</kbd> > <kbd>Install Plugin</kbd>
+## plugin installation
+#### Older version IDEA:
+  - <kbd> file </ kbd>> <kbd> settings </ kbd>> <kbd> plugins </ kbd>> <kbd> browse repositories ... </ kbd>> <kbd> search for "crud" < / KBD>> <KBD> Install plugin </ kBD>
 
-![image](https://raw.githubusercontent.com/mars05/static/master/image/crud1.jpg)
-#### 新版本idea：
-  - <kbd>File</kbd> > <kbd>Settings</kbd> > <kbd>Plugins</kbd> > <kbd>Marketplace</kbd> > <kbd>Search for "crud"</kbd> > <kbd>Install Plugin</kbd>  
+! [Image] (https://Raw.githubuserContent.com/mars05/static/master/image/crud1.jpg)
+#### New version IDEA:
+  - <kbd> file </ kbd>> <kbd> settings </ kbd>> <kbd> plugins </ kbd>> <kbd> marketplace </ kbd>> <kbd> search for "crud" </ kbd>> <KBD> Install Plugin </ KBD>
   
-![image](https://raw.githubusercontent.com/mars05/static/master/image/crud2.jpg)
-#### 本地安装：
-下载插件文件 [crud-plugin](https://github.com/mars05/crud-intellij-plugin/releases/download/v1.1.0/crud-plugin-1.1.0.zip)
-## 使用教程
+! [image] (https://Raw.githubuserContent.com/mars05/static/master/image/crud2.jpg)
+#### Local installation:
+Download plugin file [crud-plugin] (https://github.com/mars05/crud-intellij-plugin/releases/download/v1.1.0/crud-plugin-1.1.0.zip)
+## Using tutorial
 
-### 1.创建一个新的项目:
-  - <kbd>New</kbd> > <kbd>Project</kbd> / <kbd>Module</kbd> > <kbd>Crud</kbd> > <kbd>数据库表选择</kbd>
-  - 启动Application
-  - 可使用Swagger测试请求: http://localhost:8080/swagger-ui.html
+### 1. Create a new project:
+  - <kBD> New </ kbd>> <kbd> Project </ kbd> / <kbd> module </ kbd>> <kbd> crud </ kbd>> <kbd> database table selection </ kBd>
+  - Start Application
+  - Can use Swagger test request: http: // localhost: 8080 / swagger-ui.html
 
-![image](https://raw.githubusercontent.com/mars05/static/master/image/crud3.gif)
+! [image] (https://raw.githubuserContent.com/mars05/static/master/image/crud3.gif)
 
-### 2.项目右键单击生成代码:
+### 2. Project Right-click Generation Code:
 
-![image](https://raw.githubusercontent.com/mars05/static/master/image/crud4.gif)
+! [image] (https://Raw.githubuserContent.com/mars05/static/master/image/crud4.gif)

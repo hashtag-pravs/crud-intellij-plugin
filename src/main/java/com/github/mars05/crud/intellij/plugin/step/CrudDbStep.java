@@ -64,7 +64,7 @@ public class CrudDbStep extends ModuleWizardStep {
         try {
             int index = myCrudDbView.getCrudList().getSelectedIndex();
             if (index == -1) {
-                throw new Exception("请选择一个数据库");
+                throw new Exception("Please select a database");
             }
             String name = myCrudDbView.getCrudList().getSelectedElement().getName();
             List<String> allTableName = dbHelper.getAllTableName(name);
@@ -78,7 +78,7 @@ public class CrudDbStep extends ModuleWizardStep {
             myTableStep.reloadDbHelper(dbHelper);
             SelectionContext.setDb(name);
         } catch (Exception e) {
-            throw new ConfigurationException(e.getMessage(), "数据库打开失败");
+            throw new ConfigurationException(e.getMessage(), "Database open failed");
         }
         return super.validate();
     }

@@ -43,7 +43,7 @@ public class CrudEditConnDialog extends DialogWrapper {
 	public CrudEditConnDialog(CrudConnView crudConnView, Conn conn) {
 		super(crudConnView.getComponent(), false);
 		myCrudConnView = crudConnView;
-		setTitle("修改连接");
+		setTitle("Modify conenction");
 		myNameField.setText(conn.getName());
 		myHostField.setText(conn.getHost());
 		myPortField.setText(String.valueOf(conn.getPort()));
@@ -62,7 +62,7 @@ public class CrudEditConnDialog extends DialogWrapper {
 				DbHelper dbHelper = new DbHelper(connTemp.getHost(), connTemp.getPort(), connTemp.getUsername(), connTemp.getPassword());
 				dbHelper.getDatabases();
 
-				Messages.showInfoMessage(myMainPanel, "连接成功", "");
+				Messages.showInfoMessage(myMainPanel, "connection succeeded", "");
 			} catch (Exception ex) {
 				Messages.showErrorDialog(myMainPanel, ex.getMessage());
 			} finally {

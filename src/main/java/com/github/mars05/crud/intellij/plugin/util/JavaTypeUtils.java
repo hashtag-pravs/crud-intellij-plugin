@@ -13,20 +13,20 @@ public class JavaTypeUtils {
     private static LinkedHashMap<JDBCType, Class> map = new LinkedHashMap();
 
     static {
-        //字符串类型
+        //String type
         map.put(JDBCType.VARCHAR, String.class);
         map.put(JDBCType.LONGVARCHAR, String.class);
         map.put(JDBCType.CHAR, String.class);
-        //整数类型
+        //Integer type
         map.put(JDBCType.INTEGER, Integer.class);
         map.put(JDBCType.BIGINT, Long.class);
         map.put(JDBCType.SMALLINT, Integer.class);
         map.put(JDBCType.TINYINT, Integer.class);
-        //浮点类型
+        //floating point type
         map.put(JDBCType.FLOAT, Float.class);
         map.put(JDBCType.DOUBLE, Double.class);
         map.put(JDBCType.DECIMAL, BigDecimal.class);
-        //其他类型
+        //other types
         map.put(JDBCType.BOOLEAN, Boolean.class);
         map.put(JDBCType.DATE, Date.class);
         map.put(JDBCType.TIME, Date.class);
@@ -35,7 +35,7 @@ public class JavaTypeUtils {
     }
 
     /**
-     * 数据库字段类型 转 Java类型
+     * Database field type to Java type
      *
      * @param sqlType
      * @see Types

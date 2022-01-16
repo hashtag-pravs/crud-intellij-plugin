@@ -11,8 +11,8 @@ public class Service extends Base {
     private Dao dao;
 
     /**
-     * @param comment 类的注释
-     * @param name    类的全限定名
+     * @param comment class annotation
+     * @param name    fully qualified name of the class
      */
     public Service(String comment, String name, Dao dao) {
         super(comment, name);

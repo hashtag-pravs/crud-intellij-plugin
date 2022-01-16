@@ -95,13 +95,13 @@ public class SpringBootModuleBuilder extends ModuleBuilder {
 
 	private void initProject(Project project, Selection selection) throws Exception {
 		initMavenStructure();
-		//pom.xml生成
+		//pom.xml generation
 		PsiFileUtils.createPOMXML(project, createAndGetContentEntry(), selection);
-		//swagger生成
+		//swagger generation
 		PsiFileUtils.createSwagger(project, createPackageDir(selection.getPackage() + ".config"), selection);
-		//Application类生成
+		//Application Classification
 		PsiFileUtils.createApplicationJava(project, createPackageDir(selection.getPackage()), selection);
-		//application.yml配置生成
+		//application.yml Configuration generation
 		PsiFileUtils.createApplicationYml(project, createResourceDir("/"), selection);
 
 		selection.setModelPackage(selection.getPackage() + ".model");
@@ -113,12 +113,12 @@ public class SpringBootModuleBuilder extends ModuleBuilder {
 		selection.setControllerPackage(selection.getPackage() + ".controller");
 
 		PsiFileUtils.createCrud(project, selection, getContentEntryPath());
-		//解决依赖
+		//Resolve dependence
 		try {
 			MavenProjectsManager.getInstance(project).forceUpdateAllProjectsOrFindAllAvailablePomFiles();
 		} catch (Exception ignored) {
 		}
-		//优化生成的所有Java类
+		//Optimize all Java kind
 		CrudUtils.doOptimize(project);
 	}
 

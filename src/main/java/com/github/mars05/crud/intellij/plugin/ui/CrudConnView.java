@@ -38,7 +38,7 @@ public class CrudConnView implements CrudView {
             public void actionPerformed(ActionEvent e) {
                 int index = getCrudList().getSelectedIndex();
                 if (index == -1) {
-                    Messages.showErrorDialog(myMainPanel, "请选择要修改的连接");
+                    Messages.showErrorDialog(myMainPanel, "Please select a connection to modify");
                     return;
                 }
                 Conn conn = CrudSettings.getInstance().getConns().get(index);
@@ -53,10 +53,10 @@ public class CrudConnView implements CrudView {
             public void actionPerformed(ActionEvent e) {
                 int index = getCrudList().getSelectedIndex();
                 if (index == -1) {
-                    Messages.showErrorDialog(myConnsList, "请选择要删除的连接");
+                    Messages.showErrorDialog(myConnsList, "Please select a connection to delete");
                     return;
                 }
-                int result = Messages.showYesNoDialog(getCrudList().getSelectedElement().getName(), "确认删除？", Messages.getQuestionIcon());
+                int result = Messages.showYesNoDialog(getCrudList().getSelectedElement().getName(), "confirm deletion？", Messages.getQuestionIcon());
                 if (result == Messages.YES) {
                     CrudSettings.getInstance().getConns().remove(index);
                     CrudList crudList = getCrudList();

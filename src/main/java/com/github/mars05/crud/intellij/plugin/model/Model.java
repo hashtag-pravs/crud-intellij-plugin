@@ -12,9 +12,9 @@ public class Model extends Base {
     private List<Field> fields;
 
     /**
-     * @param comment   类的注释
-     * @param name      类的全限定名
-     * @param tableName 表的名称
+     * @param comment   class annotation
+     * @param name      fully qualified name of the class
+     * @param tableName table name
      */
     public Model(String comment, String name, String tableName, List<Field> fields) {
         super(comment, name);
